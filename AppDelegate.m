@@ -36,7 +36,8 @@
 	gregorian = [NSCalendar currentCalendar];
 	NSDateComponents *components = [gregorian components:unitFlags fromDate:today];
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	monthSymbols = [formatter monthSymbols];	
+	monthSymbols = [formatter monthSymbols];
+	[self disableAllButtons];	
 	[self setMonthDaysMonthAndYearFromComponents:components];
 	
 	firstOfThisMonth = [self firstDayOfTheMonthFromDate:today];
@@ -55,8 +56,9 @@
 	[monthLabel setStringValue:[monthSymbols objectAtIndex:[components month] - 1]];
 	[yearLabel setStringValue:[NSString stringWithFormat:@"%ld", [components year]]];
 	
-	NSRange range = [gregorian rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:[gregorian dateFromComponents:components]];
+	NSRange range = [gregorian rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:[gregorian dateFromComponents:components]]; 
 	monthDays = range.length;
+	NSLog(@"Numbers of Days %ld", monthDays);
 }
 
 
@@ -121,8 +123,10 @@
 	
 	for (;  rowIndex<=5; rowIndex++)
 	{
+		NSLog(@"Che problema hai righe");
 		for (; columIndex<=6 && dayNumber < monthDays; columIndex++)
 		{
+			NSLog(@"Che problema hai?");
 			dayNumber += 1;
 			button = [matrix cellAtRow:rowIndex column:columIndex];
 			[button setTitle:[NSString stringWithFormat:@"%ld",dayNumber]];
@@ -152,10 +156,11 @@
 	{
 		tmpName = [weekdaySymbols objectAtIndex:i];
 		if ([tmpName isEqualToString:dayName])
-			[firstDay setWeekday:i+1];
+			[firstDay setWeekday:i]; //It was i+1 on OS X, on gnustep I have a different behavior.
 	}
 	NSLog(@"Day name %@\nday symbols %@\nweekday %ld\nmonth %ld", dayName, [formatter weekdaySymbols], [firstDay weekday], [firstDay month]);
 	return firstDay;
+	
 }
 
 - (NSButtonCell *) cellFromDate:(NSDate *)aDate
@@ -219,10 +224,12 @@
 {
 	NSArray *allCells = [matrix cells];
 	NSButtonCell *button;
-	
+	NSLog(@"Non vengo chiamato!");
 	for (NSInteger i = 0; i < allCells.count; i++)
 	{
+		NSLog(@"Esisto!");
 		button = [allCells objectAtIndex:i];
+		[button setBordered:NO];
 		[button setEnabled:NO];
 		[button setTitle:@""];
 	}
