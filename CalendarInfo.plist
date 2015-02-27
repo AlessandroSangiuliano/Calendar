@@ -1,0 +1,8 @@
+{
+  NSExecutable = "Calendar";
+  NSMainNibFile = "MainMenu";
+  NSPrincipalClass = "NSApplication";
+  ApplicationName = "Calendar";
+  ApplicationRelease = "0.1";
+  Authors = ("Alex Sangiuliano");
+}

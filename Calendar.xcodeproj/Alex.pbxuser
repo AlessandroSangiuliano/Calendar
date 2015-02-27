@@ -1,0 +1,230 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1010, 498}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	256AC3D80F4B6AC300CF3369 /* AppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1010, 481}}";
+			sepNavSelRange = "{484, 0}";
+			sepNavVisRange = "{21, 967}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* AppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1010, 3341}}";
+			sepNavSelRange = "{1395, 0}";
+			sepNavVisRange = "{478, 1263}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = FABF25F81A9F6E80000BAAFA /* Calendar */;
+		activeTarget = 8D1107260486CEB800E47090 /* Calendar */;
+		codeSenseManager = FABF260A1A9F6E86000BAAFA /* Code sense */;
+		executables = (
+			FABF25F81A9F6E80000BAAFA /* Calendar */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					832,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					772,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 446663932;
+			PBXWorkspaceStateSaveDate = 446663932;
+		};
+		perUserProjectItems = {
+			FA2515821A9F8C9F0013FDB3 /* PBXTextBookmark */ = FA2515821A9F8C9F0013FDB3 /* PBXTextBookmark */;
+			FAA53ECE1A9F7A4800AA8E19 /* PBXTextBookmark */ = FAA53ECE1A9F7A4800AA8E19 /* PBXTextBookmark */;
+			FAA53ECF1A9F7A4800AA8E19 /* PlistBookmark */ = FAA53ECF1A9F7A4800AA8E19 /* PlistBookmark */;
+			FAFAB4011A9FA20A006D832D /* PBXTextBookmark */ = FAFAB4011A9FA20A006D832D /* PBXTextBookmark */;
+			FAFAB4021A9FA20A006D832D /* PBXTextBookmark */ = FAFAB4021A9FA20A006D832D /* PBXTextBookmark */;
+			FAFAB4031A9FA20A006D832D /* PBXTextBookmark */ = FAFAB4031A9FA20A006D832D /* PBXTextBookmark */;
+			FAFAB4041A9FA20A006D832D /* PBXTextBookmark */ = FAFAB4041A9FA20A006D832D /* PBXTextBookmark */;
+		};
+		sourceControlManager = FABF26091A9F6E86000BAAFA /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* Calendar */ = {
+		activeExec = 0;
+		executables = (
+			FABF25F81A9F6E80000BAAFA /* Calendar */,
+		);
+	};
+	FA2515821A9F8C9F0013FDB3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA2515831A9F8C9F0013FDB3 /* AppDelegate.m */;
+		name = "AppDelegate.m: 35";
+		rLen = 400;
+		rLoc = 920;
+		rType = 0;
+		vrLen = 1300;
+		vrLoc = 259;
+	};
+	FA2515831A9F8C9F0013FDB3 /* AppDelegate.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = AppDelegate.m;
+		path = /Users/Alex/Desktop/Calendar/Calendar/AppDelegate.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {985, 3211}}";
+			sepNavSelRange = "{920, 400}";
+			sepNavVisRange = "{259, 1300}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	FAA53ECE1A9F7A4800AA8E19 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	FAA53ECF1A9F7A4800AA8E19 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Calendar-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Alex/Calendar/Calendar-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	FABF25F81A9F6E80000BAAFA /* Calendar */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Calendar;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	FABF26091A9F6E86000BAAFA /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	FABF260A1A9F6E86000BAAFA /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	FAFAB4011A9FA20A006D832D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* AppDelegate.h */;
+		name = "AppDelegate.h: 20";
+		rLen = 0;
+		rLoc = 484;
+		rType = 0;
+		vrLen = 967;
+		vrLoc = 21;
+	};
+	FAFAB4021A9FA20A006D832D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */;
+		name = "AppDelegate.m: 43";
+		rLen = 0;
+		rLoc = 1395;
+		rType = 0;
+		vrLen = 1449;
+		vrLoc = 851;
+	};
+	FAFAB4031A9FA20A006D832D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */;
+		name = "AppDelegate.m: 43";
+		rLen = 0;
+		rLoc = 1395;
+		rType = 0;
+		vrLen = 1263;
+		vrLoc = 478;
+	};
+	FAFAB4041A9FA20A006D832D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAFAB4051A9FA20A006D832D /* AppDelegate.m */;
+		name = "AppDelegate.m: 35";
+		rLen = 400;
+		rLoc = 920;
+		rType = 0;
+		vrLen = 1300;
+		vrLoc = 259;
+	};
+	FAFAB4051A9FA20A006D832D /* AppDelegate.m */ = {
+		isa = PBXFileReference;
+		name = AppDelegate.m;
+		path = /Users/Alex/Desktop/Calendar/Calendar/AppDelegate.m;
+		sourceTree = "<absolute>";
+	};
+}
