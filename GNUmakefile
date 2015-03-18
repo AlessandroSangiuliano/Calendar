@@ -17,7 +17,7 @@ Calendar_LANGUAGES = English
 
 #info.plist??
 
-StepChat_RESOURCE_FILES = \
+Calendar_RESOURCE_FILES = \
         Calendar-Info.plist \
 
 Calendar_LOCALIZED_RESOURCE_FILES = \

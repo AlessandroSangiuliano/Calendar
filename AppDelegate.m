@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 
+#ifdef GNUSTEP
+static NSArray *monthsLength;
+static NSDictionary *monthsName;
+#endif
+
 @interface CalendarAppDelegate (Private)
 - (void) setMonthDaysMonthAndYearFromComponents:(NSDateComponents*)components;
 - (void) disableAllButtons;
@@ -22,6 +27,37 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
+#ifdef GNUSTEP
+	monthsLength = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:31],
+	                                                [NSNumber numberWithInt:28],
+	                                                [NSNumber numberWithInt:31],
+	                                                [NSNumber numberWithInt:30],
+	                                                [NSNumber numberWithInt:31],
+	                                                [NSNumber numberWithInt:30],
+	                                                [NSNumber numberWithInt:31],
+	                                                [NSNumber numberWithInt:31],
+	                                                [NSNumber numberWithInt:30],
+	                                                [NSNumber numberWithInt:31],
+	                                                [NSNumber numberWithInt:30],
+	                                                [NSNumber numberWithInt:31],
+	                                                nil];
+	monthsName = [NSDictionary dictionaryWithObjects: monthsLength forKeys:[[NSArray alloc]
+	                                                                      initWithObjects:@"gennaio",
+	                                                                                      @"febbraio",
+	                                                                                      @"marzo",
+	                                                                                      @"aprile",
+	                                                                                      @"maggio",
+	                                                                                      @"giugno",
+	                                                                                      @"luglio",
+	                                                                                      @"agosto",
+	                                                                                      @"settembre",
+	                                                                                      @"ottobre",
+	                                                                                      @"novembre",
+	                                                                                      @"dicembre",
+	                                                                                      nil]];
+	
+	//NSLog(@"Ciccione %ld", [[monthsName objectForKey:@"marzo"] integerValue]);  
+#endif                                                                                          
 	[monthLabel setFont:[NSFont systemFontOfSize:15]];
 	[yearLabel setFont:[NSFont systemFontOfSize:15]];
 	
@@ -37,10 +73,9 @@
 	NSDateComponents *components = [gregorian components:unitFlags fromDate:today];
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	monthSymbols = [formatter monthSymbols];
-	[self disableAllButtons];	
 	[self setMonthDaysMonthAndYearFromComponents:components];
 	
-	firstOfThisMonth = [self firstDayOfTheMonthFromDate:today];
+	firstOfThisMonth = [ self firstDayOfTheMonthFromDate:today];
 	[self populateCalendarFromDateComponents:firstOfThisMonth];
 	
 	/* get the cell that indicates today and set the text to red, to bold and to 16 the font size */
@@ -55,9 +90,15 @@
 {
 	[monthLabel setStringValue:[monthSymbols objectAtIndex:[components month] - 1]];
 	[yearLabel setStringValue:[NSString stringWithFormat:@"%ld", [components year]]];
-	
+	NSLog(@"Components verification:\nday %ld\nmonth %ld\nyear %ld.\n Calendar verification %@", [components day], [components month], [components year], [gregorian description]);
+                             NSDate *tmp = [gregorian dateFromComponents:components];
+                             NSLog(@"Date from components verification: %@", [tmp description]);
 	NSRange range = [gregorian rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:[gregorian dateFromComponents:components]]; 
-	monthDays = range.length;
+#ifdef GNUSTEP
+    monthDays = [[monthsName objectForKey:[monthSymbols objectAtIndex:[components month] - 1]] integerValue];
+#else
+                            monthDays = range.length;
+#endif
 	NSLog(@"Numbers of Days %ld", monthDays);
 }
 
@@ -123,10 +164,10 @@
 	
 	for (;  rowIndex<=5; rowIndex++)
 	{
-		NSLog(@"Che problema hai righe");
+		//NSLog(@"Che problema hai righe");
 		for (; columIndex<=6 && dayNumber < monthDays; columIndex++)
 		{
-			NSLog(@"Che problema hai?");
+			//NSLog(@"Che problema hai?");
 			dayNumber += 1;
 			button = [matrix cellAtRow:rowIndex column:columIndex];
 			[button setTitle:[NSString stringWithFormat:@"%ld",dayNumber]];
@@ -224,12 +265,9 @@
 {
 	NSArray *allCells = [matrix cells];
 	NSButtonCell *button;
-	NSLog(@"Non vengo chiamato!");
 	for (NSInteger i = 0; i < allCells.count; i++)
 	{
-		NSLog(@"Esisto!");
 		button = [allCells objectAtIndex:i];
-		[button setBordered:NO];
 		[button setEnabled:NO];
 		[button setTitle:@""];
 	}
