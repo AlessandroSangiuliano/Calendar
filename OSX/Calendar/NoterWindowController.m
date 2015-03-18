@@ -15,15 +15,6 @@
 
 @implementation NoterWindowController
 
-- (id) initWithWindowNibName:(NSString *)windowNibName
-{
-	self = [super initWithWindowNibName:windowNibName];
-	
-	/*if (self)
-		NSLog(@"Ho cagato allegramente");*/
-	return self;
-}
-
 - (IBAction)storeEvents:(id)sender
 {
 	NSString *content = [descriptionView string];
