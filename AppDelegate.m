@@ -90,7 +90,7 @@ static NSDictionary *monthsName;
 {
 	[monthLabel setStringValue:[monthSymbols objectAtIndex:[components month] - 1]];
 	[yearLabel setStringValue:[NSString stringWithFormat:@"%ld", [components year]]];
-	NSLog(@"Components verification:\nday %ld\nmonth %ld\nyear %ld.\n Calendar verification %@", [components day], [components month], [components year], [gregorian description]);
+	//Tolgo qui commentoNSLog(@"Components verification:\nday %ld\nmonth %ld\nyear %ld.\n Calendar verification %@", [components day], [components month], [components year], [gregorian description]);
                              NSDate *tmp = [gregorian dateFromComponents:components];
                              NSLog(@"Date from components verification: %@", [tmp description]);
 	NSRange range = [gregorian rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:[gregorian dateFromComponents:components]]; 

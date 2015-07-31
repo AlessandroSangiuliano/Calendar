@@ -17,7 +17,7 @@
 	NSCalendar *gregorian;
 	NSInteger monthDays;
 	NSArray *monthSymbols;
-	NSDateComponents *firstOfThisMonth;
+	NSDateComponents  *firstOfThisMonth;
 }
 
 @property (assign) IBOutlet NSWindow *window;
